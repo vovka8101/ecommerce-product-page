@@ -1,0 +1,23 @@
+.header {
+  min-height: 112px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(182, 188, 200, 0.5);
+}
+
+.logo_container {
+  margin-right: 56px;
+}
+
+.avatarContainer {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+
+  &:hover {
+    border: 2px solid #ff7d1a;
+  }
+}
