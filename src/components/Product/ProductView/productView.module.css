@@ -1,0 +1,24 @@
+.imgContainer {
+  flex-basis: 44%;
+
+  .topImg {
+    margin-bottom: 30px;
+
+    .imgMain {
+      border-radius: 16px;
+    }
+  }
+
+  .thumbnail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .imgThumbnail {
+      width: 92px;
+      height: 92px;
+      border-radius: 10px;
+      border: 2px solid transparent;
+    }
+  }
+}

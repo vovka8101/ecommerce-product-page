@@ -1,0 +1,111 @@
+.content {
+  flex-basis: 44%;
+
+  .company {
+    color: #ff7d1a;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    margin-bottom: 20px;
+  }
+
+  .title {
+    font-size: 44px;
+    font-weight: bold;
+    line-height: 48px;
+    margin-bottom: 32px;
+  }
+
+  .description {
+    color: #68707d;
+    line-height: 26px;
+    margin-bottom: 24px;
+  }
+
+  .priceContainer {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+
+    .price {
+      font-size: 30px;
+    }
+    .discount {
+      display: inline-block;
+      padding: 2px 8px;
+      color: #ff7d1a;
+      background-color: #ffede0;
+    }
+  }
+
+  .oldPrice {
+    color: #b6bcc8;
+    font-weight: bold;
+    text-decoration: line-through;
+    margin-bottom: 32px;
+  }
+
+  .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+
+    .amountButtons {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      background-color: #f7f8fd;
+      border-radius: 8px;
+
+      .amount {
+        width: 70px;
+        text-align: center;
+        font-weight: bold;
+      }
+      
+      .amountBtn {
+        padding: 18px 16px;
+        background-color: transparent;
+        border: none;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        img {
+          min-width: 12px;
+        }
+      }
+    }
+
+    .addToCart {
+      width: 100%;
+      padding: 20px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      background-color: #ff7d1a;
+      color: white;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+    
+      .cartIcon {
+        width: 18px;
+        filter: brightness(3.0);
+      }
+
+      .addToCartText {
+        color: #f7f8fd;
+        font-size: 16px;
+        font-weight: bold;
+      }
+    }
+  }
+}
