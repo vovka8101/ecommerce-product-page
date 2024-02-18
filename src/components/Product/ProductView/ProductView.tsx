@@ -11,6 +11,9 @@ export const ProductView = ({ productImg }: ProductViewProps) => {
 
   return (
     <div className={s.imgContainer}>
+      {/* TODO: create modal window component for code below
+        with isModal and productImg props... */
+      }
       <div className={s.topImg}>
         <img
           className={s.imgMain}
@@ -20,13 +23,17 @@ export const ProductView = ({ productImg }: ProductViewProps) => {
       </div>
       <div className={s.thumbnail}>
         {productImg.map((img, idx) => (
-          <img
+          <button
             key={idx}
-            className={s.imgThumbnail}
-            src={getImageUrl(img + '-thumbnail')}
+            className={`${s.thumbImgContainer} ${idx === selectedImg ? s.active : ""}`}
             onClick={() => setSelectedImg(idx)}
-            alt={img}
-          />
+          >
+            <img
+              className={s.imgThumbnail}
+              src={getImageUrl(img + '-thumbnail')}
+              alt={img}
+            />
+          </button>
         ))}
       </div>
     </div>

@@ -72,9 +72,15 @@
         padding: 18px 16px;
         background-color: transparent;
         border: none;
+        cursor: pointer;
+        transition: background-color 0.2s;
 
-        &:hover {
-          cursor: pointer;
+        &:disabled {
+          cursor: default;
+        }
+
+        &:not(:disabled):hover {
+          background-color: #ccd5ff;
         }
 
         img {
@@ -94,7 +100,18 @@
       color: white;
       border-radius: 10px;
       border: none;
+      box-shadow: 0px 14px 40px -10px rgba(255,125,26,0.7);
       cursor: pointer;
+      transition: background-color 0.2s;
+
+      &:disabled {
+        background-color: #ff9f55;
+        cursor: default;
+      }
+
+      &:not(:disabled):hover {
+        background-color: #994300;
+      }
     
       .cartIcon {
         width: 18px;

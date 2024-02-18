@@ -14,11 +14,33 @@
     justify-content: space-between;
     align-items: center;
 
-    .imgThumbnail {
+    .thumbImgContainer {
       width: 92px;
       height: 92px;
+      padding: 0;
       border-radius: 10px;
       border: 2px solid transparent;
+      overflow: hidden;
+      cursor: pointer;
+      
+      &:hover {
+        .imgThumbnail {
+          opacity: 0.5;
+        }
+      }
+
+      .imgThumbnail {
+        transition: opacity 0.2s;
+      }
+    }
+
+    .active {
+      border: 2px solid #ff7d1a;
+      cursor: default;
+
+      .imgThumbnail {
+        opacity: 0.5;
+      }
     }
   }
 }
