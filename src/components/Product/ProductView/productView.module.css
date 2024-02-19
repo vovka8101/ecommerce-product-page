@@ -1,46 +1,68 @@
 .imgContainer {
-  flex-basis: 44%;
+  max-width: 44%;
+  min-width: 400px;
+  margin-inline: auto;
+}
 
-  .topImg {
-    margin-bottom: 30px;
+.topImg {
+  margin-bottom: 30px;
+  cursor: pointer;
 
-    .imgMain {
-      border-radius: 16px;
-    }
+  .imgMain {
+    border-radius: 16px;
   }
+}
 
-  .thumbnail {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.thumbnail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    .thumbImgContainer {
-      width: 92px;
-      height: 92px;
-      padding: 0;
-      border-radius: 10px;
-      border: 2px solid transparent;
-      overflow: hidden;
-      cursor: pointer;
-      
-      &:hover {
-        .imgThumbnail {
-          opacity: 0.5;
-        }
-      }
-
-      .imgThumbnail {
-        transition: opacity 0.2s;
-      }
-    }
-
-    .active {
-      border: 2px solid #ff7d1a;
-      cursor: default;
-
+  .thumbImgContainer {
+    width: 92px;
+    height: 92px;
+    padding: 0;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    overflow: hidden;
+    cursor: pointer;
+    
+    &:hover {
       .imgThumbnail {
         opacity: 0.5;
       }
     }
+
+    .imgThumbnail {
+      transition: opacity 0.2s;
+    }
   }
+
+  .active {
+    border: 2px solid #ff7d1a;
+    cursor: default;
+
+    .imgThumbnail {
+      opacity: 0.5;
+    }
+  }
+}
+
+.modalContent {
+  position: fixed;
+  max-width: 500px;
+  min-width: 400px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+
+  .topImgModal {
+    position: relative;
+    cursor: default;
+  }
+}
+
+.slider {
+  background-color: rgba(0, 0, 0, 0.5);
 }

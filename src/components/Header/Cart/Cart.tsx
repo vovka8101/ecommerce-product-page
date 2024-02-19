@@ -16,7 +16,7 @@ export const Cart = () => {
         {isOpened && <CartWindow products={products} />}
       </div>
       {isOpened &&
-        <div className={s.close_cart_window} onClick={() => setIsOpened(false)}></div>
+        <div className="modal-container" onClick={() => setIsOpened(false)}></div>
       }
     </>
   )

@@ -1,5 +1,7 @@
 .content {
-  flex-basis: 44%;
+  max-width: 44%;
+  min-width: 400px;
+  margin-inline: auto;
 
   .company {
     color: #ff7d1a;
