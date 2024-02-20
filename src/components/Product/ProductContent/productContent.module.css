@@ -3,6 +3,12 @@
   min-width: 400px;
   margin-inline: auto;
 
+  @media (max-width: 576px) {
+    max-width: none;
+    min-width: auto;
+    padding-inline: 16px;
+  }
+
   .company {
     color: #ff7d1a;
     font-size: 14px;
@@ -14,10 +20,16 @@
   }
 
   .title {
+    color: #1d2025;
     font-size: 44px;
     font-weight: bold;
     line-height: 48px;
     margin-bottom: 32px;
+
+    @media (max-width: 576px) {
+      font-size: 32px;
+      line-height: 36px;
+    }
   }
 
   .description {
@@ -57,12 +69,20 @@
     justify-content: space-between;
     gap: 16px;
 
+    @media (max-width: 576px) {
+      flex-direction: column;
+    }
+
     .amountButtons {
       display: flex;
       align-items: center;
       justify-content: space-around;
       background-color: #f7f8fd;
       border-radius: 8px;
+      
+      @media (max-width: 576px) {
+        width: 100%;
+      }
 
       .amount {
         width: 70px;

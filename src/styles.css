@@ -36,6 +36,10 @@ body {
   max-width: 1158px;
   margin-inline: auto;
   padding-inline: 24px;
+
+  @media (max-width: 576px) {
+    padding: 0;
+  }
 }
 
 .modal-container {

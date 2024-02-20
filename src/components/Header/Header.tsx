@@ -7,17 +7,21 @@ import { Cart } from "./Cart/Cart"
 export const Header = () => {
   return (
     <header className={s.header}>
-      <div className={s.logo_container}>
-        <img src={ecommerceLogo} alt="Logo E-commerce" />
+      <div className={`${s.container} ${s.headerLeft}`}>
+        <div className={s.logo_container}>
+          <img src={ecommerceLogo} alt="Logo E-commerce" />
+        </div>
+        <Navigation />
       </div>
-      <Navigation />
-      <Cart />
-      <div className={s.avatarContainer}>
-        <img
-          className={s.avatar_img}
-          src={userAvatar}
-          alt="User avatar"
-        />
+      <div className={s.container}>
+        <Cart />
+        <div className={s.avatarContainer}>
+          <img
+            className={s.avatar_img}
+            src={userAvatar}
+            alt="User avatar"
+          />
+        </div>
       </div>
     </header>
   )
