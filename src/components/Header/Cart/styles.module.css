@@ -41,6 +41,10 @@
       transform: translateX(-72%);
     }
 
+    @media (max-width: 425px) {
+      width: 300px;
+    }
+
     .cart_title {
       padding: 20px;
       font-size: 16px;
@@ -65,6 +69,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        gap: 10px;
 
         .productImg {
           width: 50px;
