@@ -1,7 +1,10 @@
 .content {
   max-width: 44%;
-  min-width: 400px;
   margin-inline: auto;
+
+  @media (max-width: 992px) {
+    max-width: 80%;
+  }
 
   @media (max-width: 576px) {
     max-width: none;

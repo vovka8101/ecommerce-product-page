@@ -1,84 +1,33 @@
 import { useState } from "react"
-import { getImageUrl } from "../../../utils/getImageUrl"
-import iconPrevious from "../../../assets/images/icon-previous.svg"
-import iconNext from "../../../assets/images/icon-next.svg"
-import s from "./productView.module.css"
-import { ModalWindow } from "./ModalWindow"
-import { useWindowWidth } from "../../../hooks/useWindowWidth"
+import { ProductSwiper } from "../../ProductSwiper/ProductSwiper"
 
 type ProductViewProps = {
-  productImg: string[]
+  productImgs: string[]
 }
 
-export const ProductView = ({ productImg }: ProductViewProps) => {
-  const [selectedImg, setSelectedImg] = useState(0)
+export const ProductView = ({ productImgs }: ProductViewProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false)
-  const windowWidth = useWindowWidth()
 
-  const handleCloseModal = () => {
-    setIsModalOpen(false)
-  }
-
-  const handleOpenModal = () => {
-    if (windowWidth > 576) setIsModalOpen(true)
+  const handleModalOpen = (isOpen: boolean) => {
+    setIsModalOpen(isOpen)
   }
 
   return (
     <>
-      <div className={s.imgContainer}>
-        <div
-          className={s.topImg}
-          onClick={handleOpenModal}
-        >
-          <img
-            className={s.imgMain}
-            src={getImageUrl(productImg[selectedImg])}
-            alt="Product"
-          />
-          <button
-            disabled={!selectedImg}
-            className={`${s.prevBtn} ${s.switchBtn} ${s.containerBtn}`}
-            onClick={() => setSelectedImg(selectedImg - 1)}
-          >
-            <img src={iconPrevious} alt="Previous Image" />
-          </button>
-          <button
-            disabled={selectedImg === (productImg.length - 1)}
-            className={`${s.nextBtn} ${s.switchBtn} ${s.containerBtn}`}
-            onClick={() => setSelectedImg(selectedImg + 1)}
-          >
-            <img src={iconNext} alt="Next Image" />
-          </button>
-        </div>
-        <div className={s.thumbnail}>
-          {productImg.map((img, idx) => (
-            <button
-              key={idx}
-              className={`${s.thumbImgContainer} ${idx === selectedImg ? s.active : ""}`}
-              onClick={() => setSelectedImg(idx)}
-            >
-              <img
-                className={s.imgThumbnail}
-                src={getImageUrl(img + '-thumbnail')}
-                alt={img}
-              />
-            </button>
-          ))}
-        </div>
-      </div>
-      {isModalOpen &&
+      <ProductSwiper productImgs={productImgs} handleModalOpen={handleModalOpen} />
+      {isModalOpen && (
         <>
-          <ModalWindow
-            productImg={productImg}
-            currentImg={selectedImg}
-            handleCloseModal={handleCloseModal}
-          />
           <div
-            className={`modal-container ${s.slider}`}
+            className="modal-container images-modal"
             onClick={() => setIsModalOpen(false)}
           ></div>
+          <ProductSwiper
+            productImgs={productImgs}
+            handleModalOpen={handleModalOpen}
+            isModalOpen
+          />
         </>
-      }
+      )}
     </>
   )
 }

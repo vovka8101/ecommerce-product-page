@@ -3,7 +3,7 @@
   --position: translateX(calc(-100% - 28px));
 
   .active {
-    --position: translateX(-20px);
+    --position: translateX(-24px);
   }
 
   .menuBtn {

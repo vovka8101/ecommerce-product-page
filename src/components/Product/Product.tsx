@@ -3,6 +3,7 @@ import { product } from "../../data/product"
 import { addProduct } from "../../features/cart/cartSlice"
 import { TCart } from "../../types/product.types"
 import { ProductContent } from "./ProductContent/ProductContent"
+// import { ProductSwiper } from "../ProductSwiper/ProductSwiper"
 import { ProductView } from "./ProductView/ProductView"
 import s from "./product.module.css"
 
@@ -15,7 +16,8 @@ export const Product = () => {
 
   return (
     <div className={s.product}>
-      <ProductView productImg={product.imgSrc} />
+      <ProductView productImgs={product.imgSrc} />
+      {/* <ProductSwiper productImgs={product.imgSrc} /> */}
       <ProductContent product={product} handleAddToCart={handleAddToCart} />
     </div>
   )
