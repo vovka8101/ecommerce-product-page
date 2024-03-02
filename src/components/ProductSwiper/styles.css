@@ -1,6 +1,7 @@
 .product-swiper {
   position: relative;
   max-width: 44%;
+  max-height: 80vh;
   margin-inline: auto;
 
   @media (max-width: 992px) {
@@ -31,6 +32,7 @@
   }
 
   .productMainSwiper {
+    overflow: visible;
     cursor: pointer;
 
     @media (max-width: 576px) {
@@ -62,11 +64,11 @@
     }
 
     .swiper-button-prev {
-      left: 0;
+      left: -26px;
     }
 
     .swiper-button-next {
-      right: 0;
+      right: -26px;
     }
 
     .swiper-slide {
@@ -150,12 +152,19 @@
   position: fixed;
   max-width: 500px;
   min-width: 400px;
-  top: 50%;
+  top: 50px;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   z-index: 10;
 
   @media (max-width: 576px) {
     display: none;
+  }
+
+  .productThumbSwiper {
+
+    @media (max-height: 700px) {
+      display: none;
+    }
   }
 }

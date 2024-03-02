@@ -25,6 +25,7 @@ export const ProductView = ({ productImgs }: ProductViewProps) => {
             productImgs={productImgs}
             handleModalOpen={handleModalOpen}
             isModalOpen
+            isNavigation={true}
           />
         </>
       )}
