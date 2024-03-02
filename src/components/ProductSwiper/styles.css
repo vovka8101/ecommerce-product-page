@@ -1,7 +1,6 @@
 .product-swiper {
   position: relative;
   max-width: 44%;
-  max-height: 80vh;
   margin-inline: auto;
 
   @media (max-width: 992px) {
