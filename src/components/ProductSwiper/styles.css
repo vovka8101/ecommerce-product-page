@@ -145,6 +145,10 @@
   @media (max-width: 576px) {
     display: none;
   }
+
+  @media (max-height: 576px) {
+    display: none;
+  }
 }
 
 .modal {
@@ -157,6 +161,10 @@
   z-index: 10;
 
   @media (max-width: 576px) {
+    display: none;
+  }
+
+  @media (max-height: 576px) {
     display: none;
   }
 
